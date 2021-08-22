@@ -8,7 +8,7 @@ The code works as follows: a complementrary filter is used to estimate the (pitc
 A PID controller is driven by this angle and attemps to drive towards zero. 
 The output of the PID controller is then fed into a "torque function" that modifies the command. 
 This function attemps to counter friction in the motors 
-to ensure constant inputs generate a constant torque on the vehicle.   
+to ensure constant inputs generate constant torque on the vehicle.   
 
 To accomplish this, the function integrates the control inputs at a specified rate. 
 This causes the motors to stay on even after a control input is zero.
