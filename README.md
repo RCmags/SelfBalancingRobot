@@ -28,6 +28,6 @@ Here is a schematic of the required circuit:
 
 Finally, here are images of the kind of platform this code is intended for:  
 <img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/side_view_res.jpg" width = "25%"></img>
-<img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/balance_motion.gif" width = "25%"></img>
 <img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/bottom_view_res.jpg" width = "25%"></img>
 <img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/top_view_res.jpg" width = "25%"></img>
+<img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/balance_motion.gif" width = "25%"></img>
