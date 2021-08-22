@@ -1,6 +1,6 @@
 # SelfBalancingRobot
 This is an arduino sketch for a [self balancing robot](https://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/f2015/dc686_nn233_hz263/final_project_webpage_v2/dc686_nn233_hz263/index.html). 
-That is, a two wheeled platform that is unstable in one direction and must be stabilized to maintain balance.
+This nothing more than a two wheeled platform that is unstable in one direction and must be stabilized to maintain balance.
 The code provides the nessesary stabilization through a single MPU6050 gyroscope and does not use of rotary encoders.
 Doin so allows the robot to be use inexpensive DC motors controlled through an H-bridge. 
 
