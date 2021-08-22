@@ -1,7 +1,7 @@
 # SelfBalancingRobot
 This is an arduino sketch for a self balancing robot. 
 That is, a two wheeled platform that is unstable in one direction and must be stabilized to maintain balance.
-The code provides the nessesary stabilization through a single MPU6050 gyroscope and does not make use of rotary encoders on the wheels.
+The code provides the nessesary stabilization through a single MPU6050 gyroscope and does not use of rotary encoders.
 This allows the robot to be driven by inexpensive DC motors controlled by an H-bridge. 
 
 The code works as follows: a complementrary filter is used to estimate the (pitch) angle of the vehicle relative to the horizontal. 
