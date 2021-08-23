@@ -26,7 +26,7 @@ Here is a schematic of the required circuit:
 <img src="https://raw.githubusercontent.com/RCmags/selfBalancingRobot/main/self_balacing_robot_schem.png" width = "75%"></img>
 
 Finally, here are images of the of platform this is intended for:  
-<img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/side_view_res.jpg" width = "20%"></img>
-<img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/top_view_res.jpg" width = "20%"></img>  
-<img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/balance_motion.gif" width = "20%"></img>
-<img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/motion_error.gif" width = "20%"></img>
+<img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/side_view_res.jpg" width = "30%"></img>
+<img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/top_view_res.jpg" width = "30%"></img>  
+<img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/motion_disturb.gif" width = "30%"></img>
+<img src="https://raw.githubusercontent.com/RCmags/SelfBalancingRobot/main/images/motion_error.gif" width = "30%"></img>
