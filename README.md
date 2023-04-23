@@ -23,4 +23,4 @@ In essence, one has two PID loops acting simulatenously.
 One that stabilizes the heading of the vehicle, and one that attempts to keep the vehicle form sliding back and forth.
 
 Here is a schematic of the required circuit:   
-<img src="https://raw.githubusercontent.com/RCmags/selfBalancingRobot/main/self_balacing_robot_schem.png" width = "75%"></img>
+<img src="/diagram/self-balance.png" width = "75%"></img>
