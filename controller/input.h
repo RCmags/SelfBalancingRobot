@@ -1,17 +1,23 @@
+//============ Receiver Inputs =============
+/* PWM signals from receiver to command vehicle */
+
 #include <PulseInput.h> 
 
-//========= parameters =========
+//=============== Parameters ===============
 
+// pin change interrupt pins
 constexpr int   RX_PIN1   = 2;
 constexpr int   RX_PIN2   = 3;
 
+// signal filter
 constexpr int   BAND_MID  = 30;       // deadband at mid stick           
 constexpr int   PWM_MID   = 1550;     // PWM at mid stick
 
+// output 
 constexpr float GAIN_RX[] = { -2.0 ,  // yaw 
                              -0.01 }; // pitch
 
-//======= interrupt ========
+//========== Pin change interrupt ==========
 
 volatile unsigned int pwm_raw1, pwm_raw2;      
 
@@ -20,7 +26,7 @@ void setPwmInputs() {
   attachPulseInput(RX_PIN2, pwm_raw2);
 }
 
-//======== filter =============
+//=============== Filter ==================
 
 float deadband(float x) {
   if( x > BAND_MID ) {

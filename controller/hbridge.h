@@ -1,15 +1,20 @@
+//========== H-bridge controller ===========
+/* Pulse frequency modulation to control DC motor like stepper motor */
+
 #include <TimerOne.h>
 
-//=========== parameters ============
+//=============== Parameters ===============
 
-constexpr uint32_t TIME_ON              = 4000;
-constexpr uint32_t N_STEP               = 10;
-constexpr uint32_t WAVE_PERIOD          = TIME_ON / N_STEP;
+// Timing
+constexpr uint32_t TIME_ON              = 4000;                 // Width of duty cycle
+constexpr uint32_t N_STEP               = 10;                   // Discretization steps of duty cycle 
+constexpr uint32_t UPDATE_PERIOD        = TIME_ON / N_STEP;     // Interval at which signal is updated 
 
-constexpr uint16_t N_WAVE               = 2;
-constexpr uint8_t  WAVE_PINS[N_WAVE][2] = { {5,6}, {9,10} };
+// Signal output
+constexpr uint16_t N_WAVE               = 2;                    // Number of PFM waves to generate (1 per motor)
+constexpr uint8_t  WAVE_PINS[N_WAVE][2] = { {5,6}, {9,10} };    // Digital pins for each motor
 
-//============ wave generator ==============
+//============ Wave generator ==============
 
 class FrequencyPulse {
   private:
@@ -54,7 +59,7 @@ class FrequencyPulse {
         } 
 
         // finite period
-        _dt[i] += WAVE_PERIOD;
+        _dt[i] += UPDATE_PERIOD;
         
         if( _dt[i] > TIME_ON ) {
           digitalWrite( _pin[i], LOW );
@@ -77,14 +82,14 @@ void timerFunc() {
 
 void setupPulses() {
   // set pins
-  for( int i = 0; i < N_WAVE; i += 1 ) {
-    for( int k = 0; k < 2; k += 1 ) {
+  for( int i = 0; i < N_WAVE; i += 1 ) {  // scan motors
+    for( int k = 0; k < 2; k += 1 ) {     // scan H-bridge pins
       int pin = WAVE_PINS[i][k];
       pinMode(pin, OUTPUT);
       digitalWrite(pin, LOW);
     }
   }
   // timer interrupt
-  Timer1.initialize(WAVE_PERIOD);
+  Timer1.initialize(UPDATE_PERIOD);
   Timer1.attachInterrupt(timerFunc); 
 }
