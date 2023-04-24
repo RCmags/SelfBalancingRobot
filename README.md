@@ -8,7 +8,9 @@ The program provides stabilization through an MPU6050 IMU and two brushed DC mot
 
 - __Position stabilization:__ It estimates the velocity by integrating pitch angle, which is proportional to the _lateral acceleration_ (at small angles), and this is integrated again to approximate _position_ (the double integral of the pitch angle). Both are used as the derivative and proportional term respectively. Their combined effect prevent the vehicle from drifting laterally and counters any change in center of gravity.  
 
+<p align="center">
 <img src="/diagram/small-angle.png">
+</p>
 
 $$ a_x \propto \theta_x $$
 
@@ -25,4 +27,6 @@ __Note:__ Both motors are driven with _pulse frequency modulation_ to counter ma
 Driving the motors like this causes them to behave similar to a stepper motor, albeit with much less precision, larger steps, and less torque.  
 
 ## Schematic   
+<p align="center">
 <img width="80%" src="/diagram/self-balance.png">
+</p>
