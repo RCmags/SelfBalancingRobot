@@ -39,7 +39,7 @@ void PIDcontrollers( float input[], float output[] ) {
   pos += dvel * dt;
   pos = clamp(pos);
 
-  // pid - pitch [proportional on pitch angle]
+  // pid - pitch
   float pid_p = KP_P*acc + KI_P*vel + KD_P*imu.gy();   
 
   // pid - yaw
