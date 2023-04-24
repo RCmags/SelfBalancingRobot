@@ -8,11 +8,13 @@ The program provides stabilization through an MPU6050 IMU and two brushed DC mot
 
 - __Position stabilization:__ It estimates the velocity by integrating pitch angle, which is proportional to the _lateral acceleration_ (at small angles), and this is integrated again to approximate _position_ (the double integral of the pitch angle). Both are used as the derivative and proportional term respectively. Their combined effect prevent the vehicle from drifting laterally and counters any change in center of gravity.  
 
-$$ a_x \propto \theta $$
+<img src="/diagram/small-angle.png">
 
-$$ v_x = \int{a_x}dt \propto \int{ \theta dt } $$
+$$ a_x \propto \theta_x $$
 
-$$ x = \int{v_x}dt \propto \int{ \int{ \theta dt^2 } } $$
+$$ v_x = \int{a_x}dt \propto \int{ \theta_x dt } $$
+
+$$ x = \int{v_x}dt \propto \int{ \int{ \theta_x dt^2 } } $$
 
 - __Yaw stabilization:__ A controller that maintains heading by using as a proportional term the angular velocity of the yaw axis. It counters the open-loop nature of the motor control, wherein one motor can spin faster and cause the vehicle to turn.
 
