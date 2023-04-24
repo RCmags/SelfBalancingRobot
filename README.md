@@ -1,4 +1,4 @@
-# Controller for self-balancing robot
+# Controller for self-balancing robot :aerial_tramway:
 This is an arduino sketch for an inverted pendulum with two wheels (a [self balancing robot](https://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/f2015/dc686_nn233_hz263/final_project_webpage_v2/dc686_nn233_hz263/index.html)). Due to the unstable nature of this platform, it must be actively stabilized to maintain balance.
 
 ## Operation
