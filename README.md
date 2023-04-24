@@ -26,6 +26,14 @@ __Note:__ Both motors are driven with _pulse frequency modulation_ to counter ma
 
 Driving the motors like this causes them to behave similar to a stepper motor, albeit with much less precision, larger steps, and less torque.  
 
+## Dependencies
+These are the libraries needed to compile this sketch:
+
+- [basicMPU6050](https://github.com/RCmags/basicMPU6050)
+- [imuFilter](https://github.com/RCmags/imuFilter)
+- [pulseInput](https://github.com/RCmags/pulseInput)
+- [TimerOne](https://github.com/PaulStoffregen/TimerOne)
+
 ## Schematic   
 <p align="center">
 <img width="80%" src="/diagram/self-balance.png">
